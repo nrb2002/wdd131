@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals - Baron Tshibasu</title>
+    <meta 
+        name="description" 
+        content="WDD 131 – Dynamic Web Fundamentals -
+                Baron Tshibasu -
+                This home page allows the author to demonstrate basic knowledge 
+                of HTML, CSS, and JavaScript.">
+    
+    <meta name="author" content="Baron Tshibasu">
+
+    <!-- CSS links -->
+     <link rel="stylesheet" href="styles/base.css">
+
+     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Imperial+Script&family=Lavishly+Yours&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Javascript files -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="pagetitle">WDD 131 - Dynamic Web Fundamentals</h1>
+        <h2 class="author">Baron Tshibasu</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Final Project</a>
+                </li>
+                <li>
+                    <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+                </li>
+                <li>
+                    <a href="https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-2?lang=eng&id=p11#p11" target="_blank">Scripture</a>
+                </li>             
+                
+            </ul>
+            <input id="linkedin" type="button" name="linkedin" value="LinkedIn">
+                
+        </nav>
+
+    </header>
+    
+    <main>
+        <div class="card bio">
+            <div class="about">
+                <h2>About Me</h2>
+                <p>My name is Baron Tshibasu. I was and grew up in Kinshasa in the Democratic Republic of Congo. I’m a member of the Church since 2003 and had the blessing of serving a full-time mission in West Africa from 2009 to 2011. I’m married and a father of three wonderful daughters who are 22, 9, and almost 1 :).</p>
+                <p>I am currently pursuing studies in Web and Software Development, driven by a deep passion for creativity and innovation in the IT world. I find great fulfillment in building solutions and exploring the ever-evolving landscape of technology.</p>
+                <p>Outside of academics and work, I enjoy playing the piano and staying active through sports. All our three daughters are all involved in music. These hobbies keep me balanced and inspired.</p>
+            </div>
+            <br>
+            <img src="images/baron.jpg" width="300" alt="My Picture">
+            <br>
+            <div class="country">   
+                <h3>What you should know about the DRC</h3>
+                <p>Nestled in the heart of Africa, the DRC is often described as the continent's revolver-shaped trigger. The country stands out for its size (3rd largest on the continent), natural wealth and bio-diversity.)</p>          
+                <p>Above all, its people are welcoming and open to other culturesBy the way, we are composed of about 400 tribes.</p>
+            </div><br>
+            <div class="countryimages">
+                <img src="images/africa-drc.png" alt="DRC Flag">
+                <img src="images/drcflag.png" alt="DRC Flag">
+                
+            </div>
+        </div>
+        <div class="card links">
+            <div>
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.w3schools.com/js/" target="_blank">JavaScript Tutorial (W3 Schools)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Learn JavaScript (Code Academy)</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting" target="_blank">Dynamic scripting with JavaScript (MDN Web Docs)</a>
+                    </li>
+                    <li>
+                        <a href="https://javascript.info/" target="_blank">The Modern JavaScript Tutorial (javascript.info)</a>
+                    </li>
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy <span id="currentyear"></span> - 
+            Baron Tshibasu - Kinshasa, Democratic Republic of Congo
+        </p>
+        <p id="lastModified"></p>
+
+    </footer>
+    
+</body>
+</html>

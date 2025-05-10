@@ -1,0 +1,146 @@
+
+:root{
+
+    /* https://coolors.co/26547c-62a3e4-32936f-efc1a9-f4d6cc */
+    
+    --primary-color: #113e65;
+    --secondary-color: #62a3e4;
+    --accent-1: #32936f; 
+    --accent-2:#f4d6cc;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto;
+    font-size: 1rem;
+}
+
+img{
+    text-align: center;
+    width: 100%;
+}
+
+h2, h3{
+    color: var(--primary-color);
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+h2{
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    padding: .7rem;
+    margin: -2.5% -2.5% 2% -2.5%;
+    color: var(--accent-2);
+}
+
+p{
+    text-align: justify;
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+
+
+ul{    
+    padding-left: 5%;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+a:hover{
+    text-decoration-line: underline;
+    color: var(--accent-2);
+}
+
+a:visited{
+    color: var(--accent-1);
+}
+
+.pagetitle{
+    font-size: 1.3rem;
+    color: whitesmoke;
+    text-align: center; 
+    padding: 2%;
+}
+
+header .author{
+    text-align: center;
+    letter-spacing: .1rem;
+    font-family: imperial script;
+    font-size: 1.5rem;
+    color: var(--accent-2);
+    background-color: inherit;
+}
+
+
+header{
+    background-color: var(--primary-color);
+    line-height: 2rem;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    padding: 4%;
+    margin: 0 auto;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a{ 
+    text-decoration: none;
+    color: var(--accent-2);
+}
+
+nav ul li:hover,
+nav ul li:active{    
+    background-color: var(--secondary-color);
+    padding: 2%;
+}
+
+main{
+    display: grid;
+}
+
+.card{
+    margin: 2%;
+    padding: 2%;
+    border: solid 1px grey;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px var(--accent-2);
+}
+
+.links ul{
+    line-height: 1.5rem ;
+}
+
+footer{
+    font-size: .8rem;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    padding: 2%;
+}
+
+
+
+
+
+
