@@ -7,6 +7,7 @@
     --secondary-color: #62a3e4;
     --accent-1: #32936f; 
     --accent-2:#f4d6cc;
+    --shadow: 5px 10px 10px var(--accent-2);
 }
 
 *{
@@ -23,21 +24,28 @@ body{
 img{
     text-align: center;
     width: 100%;
+    margin: 0 auto;
+    padding: 1%;
 }
 
 h2, h3{
     color: var(--primary-color);
+    padding: .7rem;
 }
 
-h2{
+h1{
     font-size: 1.3rem;
 }
-
 h2{
     font-size: 1.2rem;
+}
+h3{
+    font-size: 1.1rem;
+}
+
+.card h2{
     background-color: var(--primary-color);
-    padding: .7rem;
-    margin: -2.5% -2.5% 2% -2.5%;
+    
     color: var(--accent-2);
 }
 
@@ -45,8 +53,8 @@ p{
     text-align: justify;
     line-height: 1.2rem;
     font-size: 1rem;
+    margin: .5rem;
 }
-
 
 ul{    
     padding-left: 5%;
@@ -57,16 +65,16 @@ a{
 }
 
 a:hover{
-    text-decoration-line: underline;
     color: var(--accent-2);
 }
 
-a:visited{
-    color: var(--accent-1);
+hr{
+    width: 90%;
+    margin: 0 auto;
+	box-shadow: var(--shadow);
 }
 
 .pagetitle{
-    font-size: 1.3rem;
     color: whitesmoke;
     text-align: center; 
     padding: 2%;
@@ -76,7 +84,7 @@ header .author{
     text-align: center;
     letter-spacing: .1rem;
     font-family: imperial script;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--accent-2);
     background-color: inherit;
 }
@@ -90,44 +98,82 @@ header{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: black;
-    padding: 4%;
+    padding: 2%;
     margin: 0 auto;
 }
 
 nav ul li{
-    display: inline-block;
+    /* display: inline-block; */
     list-style: none;
+    text-align: center;
+    width: 150px;
+}
+
+nav a{ 
+    text-decoration: none;
+    color: var(--accent-2);
+    padding: 4%;
+}
+
+nav a:hover,
+nav a:active{    
+    border-bottom:solid 4px var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+nav input[type=submit],
+nav input[type=button],
+nav .btn{
+    padding: .5rem;
+    width:150px;
+    border-radius: 1.5rem;
+    border: solid 2px var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--accent-2);
     text-align: center;
 }
 
-nav ul li a{ 
-    text-decoration: none;
-    color: var(--accent-2);
-}
-
-nav ul li:hover,
-nav ul li:active{    
-    background-color: var(--secondary-color);
-    padding: 2%;
+button,
+nav input[type=submit]:hover,
+nav input[type=button]:hover,
+nav .btn:hover {
+    background-color: var(--accent-1);
+    color: white;
 }
 
 main{
     display: grid;
+    gap:.5%;
+    padding: .5%;
 }
 
 .card{
-    margin: 2%;
-    padding: 2%;
-    border: solid 1px grey;
+    border: solid 1px var(--accent-2);
     border-radius: 5px;
-    box-shadow: 5px 5px 5px var(--accent-2);
+    box-shadow: var(--shadow);
+}
+
+.links{
+    line-height: 1.5rem ;
 }
 
 .links ul{
-    line-height: 1.5rem ;
+    margin: 1rem;
 }
+
+.links a:visited{
+    color: var(--accent-1);
+}
+
+.continent img{
+    border: solid 1px var(--accent-2);
+    padding: 2rem;
+}
+
 
 footer{
     font-size: .8rem;
@@ -138,6 +184,77 @@ footer{
     height: auto;
     padding: 2%;
 }
+
+footer p{
+    text-align: center;
+    font-size: .9rem;
+}
+
+#lastModified{
+    color: var(--accent-2);
+    font-weight: bold;
+}
+
+@media only screen and (min-width:769px) {
+    p{
+      margin: 1rem;
+    }
+    main{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+
+    header .author{
+        font-size: 2rem;
+    }
+
+    nav {
+        padding: 1%;
+        opacity: .7;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+    
+    nav ul li{
+        display: inline-block;
+    }
+
+    .card img{
+        padding: 2%;
+    }
+
+    .bio{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .links{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: fit-content;
+    }
+    .countryinfo{
+        display: grid;
+        grid-template-columns:  1fr 40%;
+        gap: 4%;
+    }
+
+    footer p{
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
 
 
 
