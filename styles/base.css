@@ -28,7 +28,7 @@ img{
     padding: 1%;
 }
 
-h2, h3{
+h2, .h2, h3{
     color: var(--primary-color);
     padding: .7rem;
 }
@@ -36,14 +36,15 @@ h2, h3{
 h1{
     font-size: 1.3rem;
 }
-h2{
+h2, .h2{
     font-size: 1.2rem;
 }
 h3{
     font-size: 1.1rem;
 }
 
-.card h2{
+.card h2,
+.card .h2{
     background-color: var(--primary-color);
     
     color: var(--accent-2);
@@ -209,7 +210,7 @@ footer p{
     h1{
         font-size: 2rem;
     }
-    h2{
+    h2,.h2{
         font-size: 1.5rem;
     }
     h3{
