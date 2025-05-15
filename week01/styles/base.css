@@ -5,7 +5,7 @@
     
     --primary-color: #113e65;
     --secondary-color: #62a3e4;
-    --accent-1: #32936f; 
+    --accent-1: #095237; 
     --accent-2:#f4d6cc;
     --shadow: 5px 10px 10px var(--accent-2);
 }
@@ -62,7 +62,7 @@ ul{
 
 a{
     text-decoration-line: none;
-    color: var(--accent-1);
+    color: var(--primary-color);
 }
 
 a:hover{
@@ -167,7 +167,7 @@ main{
 }
 
 .links a:visited::after{
-    color: var(--secondary-color);
+    color: var(--accent-1);
 }
 
 .continent img{
@@ -201,7 +201,7 @@ footer p{
       margin: 1rem;
     }
     main{
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2.25fr .75fr;
         width: 70%;
         margin: 0 auto;
     }
