@@ -203,7 +203,7 @@ footer p{
     }
     main{
         grid-template-columns: 2.25fr .75fr;
-        width: 70%;
+        max-width: 70%;
         margin: 0 auto;
     }
 
