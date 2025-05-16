@@ -1,8 +1,8 @@
 /*Declare three (3) variables that hold references to the input, button, 
 and list elements*/
-const input = document.querySelector("#favchap");
-const ul = document.querySelector("#list");
-const addchapButton = document.querySelector("button");
+const input = document.getElementById("favchap");
+const ul = document.getElementById("list");
+const addchapButton = document.getElementById("addchap");
 
 /* Create a click event listener for the Add Chapter button using an 
  addEventListener.*/
@@ -31,18 +31,19 @@ addchapButton.addEventListener("click", function(){
         //Populate the button textContent with a ❌.
         deleteButton.textContent = "❌";
 
+        //Add an event listener to the delete button that removes the li element 
+        // when clicked.
+        deleteButton.addEventListener('click', function () {
+            ul.removeChild(li);
+        });
+
         //Append the li element variable with the delete button.
         li.append(deleteButton);
 
         //Append the li element variable to the unordered list in your HTML
         ul.append(li);        
     }
-    
-    //Add an event listener to the delete button that removes the li element 
-    // when clicked.
-    deleteButton.addEventListener('click', function () {
-        ul.removeChild(li);
-    });  
+      
     /**
      * Change the input value to nothing or the empty string to clean up the 
      * interface for the user.
@@ -52,5 +53,4 @@ addchapButton.addEventListener("click", function(){
     //Send the focus to the input field
     input.focus();
 });
-    
 
