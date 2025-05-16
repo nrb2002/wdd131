@@ -12,8 +12,8 @@ body {
 	font-family: Acme, Arial, sans-serif;
 }
 
-h1 {
-	font-size: 1.5rem;
+h1{
+	font-size: 1.2rem;
 }
 
 main {
@@ -23,6 +23,7 @@ main {
 	background-color: #ddd;
 	display: flex;
 	flex-direction: column;
+	width: 80%;
 }
 
 input,
@@ -38,7 +39,7 @@ button {
 	width: fit-content;
 }
 
-.input {
+input {
 	display: flex;
 	gap: 1rem;
 }
@@ -56,7 +57,16 @@ li {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border: solid .5px #cfd0d0;
+	margin-bottom: .1rem;
+	padding: .1rem .2rem .1rem .5rem;
+}	
+li:hover{
+	background-color: #deefef;
+	padding: .2rem;
+	border-radius: .3rem;
 }
+
 
 @media only screen and (min-width: 32.5em) {
 	h1 {
