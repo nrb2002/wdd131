@@ -24,6 +24,7 @@ addchapButton.addEventListener("click", function(){
 
         // Create a delete button.
         const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete");
 
         //Create a aria-label attribute on the button
         deleteButton.ariaLabel = `Remove ${li.textContent}`;
@@ -34,7 +35,12 @@ addchapButton.addEventListener("click", function(){
         //Add an event listener to the delete button that removes the li element 
         // when clicked.
         deleteButton.addEventListener('click', function () {
-            ul.removeChild(li);
+            let msg = "Do you really want to remove this chapter? ";
+            if(confirm(msg) == true){
+                ul.removeChild(li);
+                msg = "Chapter deleted successfully!"
+            }
+            
         });
 
         //Append the li element variable with the delete button.
@@ -42,6 +48,8 @@ addchapButton.addEventListener("click", function(){
 
         //Append the li element variable to the unordered list in your HTML
         ul.append(li);        
+    }else{
+        alert("Please enter a chapter to proceed. ")
     }
       
     /**
