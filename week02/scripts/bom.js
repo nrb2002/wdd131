@@ -49,7 +49,7 @@ addchapButton.addEventListener("click", function(){
         //Append the li element variable to the unordered list in your HTML
         ul.append(li);        
     }else{
-        alert("Please enter a chapter to proceed. ")
+        alert("Please enter a chapter to proceed. ");
     }
       
     /**
