@@ -1,0 +1,16 @@
+@media  screen and (min-width:32.5rem) {
+    body{
+        font-size: 1.2rem;
+    }
+
+    nav .logo{
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-evenly; 
+    }
+    
+}
