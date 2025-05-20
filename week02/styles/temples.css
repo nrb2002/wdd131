@@ -1,8 +1,8 @@
 :root{
     --primary-color: #320606;
-    --secondary-color: #0c4714;
+    --secondary-color: #1ABC2F;
     --accent-1: #9cbada; 
-    --accent-2:#979ea3;
+    --accent-2: #979ea3;
     --shadow: 5px 10px 10px var(--accent-2);
 }
 
@@ -18,8 +18,12 @@ body{
     line-height: 1.5rem;
 }
 h1{
-    padding: 2%;
+    padding: 1rem;
     text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    background: var(--accent-1);
 }
 
 nav{
@@ -65,19 +69,54 @@ nav a:hover,
     transition: .5s;
 }
 
+/* small view navigation */
+#hambMenu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: var(--accent-1);
+ 	position: absolute;
+	display: block;
+    top: 2%;
+	right: 3%;
+}
+
+#hambMenu::before {
+	content: "☰";
+}
+
+#hambMenu.open::before {
+	/*content: "❎";*/
+  content: "X";
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
+
 main{
     max-width:800px ;
-    margin: 0 auto;
+    margin: 1rem auto;
+    height: auto;
 }
 
 .content{
-    display: grid;
+    display:grid;
     grid-gap: .5rem;
-    place-items: center;
+    place-items:center;
 }
 
 figure{
     margin: 0 2%;
+}
+figcaption{
+    font-size: .75rem;
+    color: var(--primary-color);
+}
+img{
+    width: 100%;
+    height: 200px;
 }
 
 

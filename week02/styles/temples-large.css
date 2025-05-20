@@ -2,6 +2,11 @@
     body{
         font-size: 1.2rem;
     }
+    h1{
+        margin-bottom: 1rem;
+        background: var(--accent-1);
+        color: var(--primary-color);
+    }
 
     nav .logo{
         font-size: 1.5rem;
@@ -12,5 +17,22 @@
         display: flex;
         justify-content: space-evenly; 
     }
+
+    #hambMenu {
+		display: none; /* hide hamburger button */
+	}
     
+    main{
+        min-height: 78vh;
+    }
+    .content{
+        display:grid; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        grid-gap: .5rem;
+        place-items:center;
+    }
+    img{
+        width: 250px;
+        height: 160px;
+    }
 }
