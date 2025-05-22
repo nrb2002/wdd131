@@ -4,6 +4,7 @@
     --accent-1: #9cbada; 
     --accent-2: #979ea3;
     --shadow: 5px 10px 10px var(--accent-2);
+    --background:#0c0000;
 }
 
 *{
@@ -16,9 +17,16 @@ body{
     font-family: roboto, sans-serif;
     font-size: 1rem;    
     line-height: 1.5rem;
+    background-color: var(--background);
+}
+h1{
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: var(--primary-color);
+    color: var(--accent-1);
 }
 h2{
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -29,32 +37,32 @@ h2{
 nav{
     display: flex;
     justify-content: space-between;
+    opacity: .9;
 }
 nav, footer{    
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 nav .logo{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding-top: .5rem;
     padding-left: .5rem;
 }
 
-nav .logo:hover
-{
+nav .logo:hover{
     color: var(--secondary-color);
 }
 nav ul{
+    width: 100%;
     display: none;
 }
 
-nav li{
-    display: block;
+nav li{    
     padding: 1rem;
     list-style:none;
+    text-align: center;
 }
 nav a{
     text-decoration: none;
@@ -69,16 +77,21 @@ nav a:hover,
     transition: .5s;
 }
 
+/* when the button is clicked - the open class is toggled (added/removed) */
+nav ul.open {
+	display: block;
+}
+
 /* small view navigation */
 #hambMenu {
-	font-size: 1.5rem;
+	display: block;
+	font-size: 2rem;
 	border: 0;
 	background: none;
 	color: var(--accent-1);
  	position: absolute;
-	display: block;
-    top: 2%;
-	right: 3%;
+    top: 1%;
+	right: 4%;
 }
 
 #hambMenu::before {
@@ -90,14 +103,9 @@ nav a:hover,
   content: "X";
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
-.open a {
-	display: block;
-}
-
 main{
     max-width:800px ;
-    margin: 1rem auto;
+    margin: 0 auto;
     height: auto;
 }
 
@@ -112,7 +120,7 @@ figure{
 }
 figcaption{
     font-size: .75rem;
-    color: var(--primary-color);
+    color: white;
 }
 img{
     width: 100%;

@@ -2,16 +2,19 @@
     body{
         font-size: 1.2rem;
     }
+    header{
+        display: grid;
+        grid-template-columns: auto .5fr;
+    }
     h2{
         margin-bottom: 1rem;
         background: var(--accent-1);
         color: var(--primary-color);
-    }
-
+    }   
+    
     nav .logo{
         font-size: 1.5rem;
-        padding-top: 1rem;
-        padding-left: 1rem;
+        padding: 1rem 2rem;
     }
     nav ul{
         display: flex;
@@ -31,8 +34,23 @@
         grid-gap: .5rem;
         place-items:center;
     }
+
+    .pic{
+        transition: transform 0.3s ease;
+    }
+
+    .pic:hover{
+        transform: scale(1.1); /* Zoom in 10% */
+        padding: 1rem;
+        background-color: var(--primary-color);
+        border-radius:.5rem;
+    }
+
     img{
         width: 250px;
         height: 160px;
     }
+    figcaption{
+    font-size: .9rem;
+}
 }
