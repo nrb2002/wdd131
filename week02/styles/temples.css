@@ -51,7 +51,7 @@ nav .logo{
     padding-left: .5rem;
 }
 
-nav .logo:hover{
+.logo:hover{
     color: var(--secondary-color);
 }
 nav ul{
