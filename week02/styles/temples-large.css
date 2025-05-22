@@ -4,11 +4,9 @@
     }
     header{
         display: grid;
-        grid-template-columns: auto .5fr;
+        grid-template-columns: 1fr auto;
     }
     h2{
-        margin-bottom: 1rem;
-        background: var(--accent-1);
         color: var(--primary-color);
     }   
     
@@ -27,13 +25,10 @@
 	}
     
     main{
-        min-height: 78vh;
+        min-height: 85vh;
     }
     .content{
-        display:grid; 
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-        grid-gap: .5rem;
-        place-items:center;
     }
 
     .pic{

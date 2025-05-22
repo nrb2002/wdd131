@@ -45,7 +45,7 @@ nav, footer{
     padding: .5rem;
 }
 
-nav .logo{
+.logo{
     font-size: 1rem;
     font-weight: bold;
     padding-left: .5rem;
