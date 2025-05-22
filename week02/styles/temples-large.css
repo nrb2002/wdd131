@@ -27,26 +27,15 @@
     main{
         min-height: 85vh;
     }
-    .content{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    }
 
     .pic{
         transition: transform 0.3s ease;
     }
+    
 
     .pic:hover{
         transform: scale(1.1); /* Zoom in 10% */
         padding: .5rem;
         background-color: var(--primary-color);
-        border-radius:.5rem;
     }
-
-    img{
-        width: 250px;
-        height: 160px;
-    }
-    figcaption{
-    font-size: .9rem;
-}
 }
