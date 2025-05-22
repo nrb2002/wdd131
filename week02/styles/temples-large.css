@@ -41,7 +41,7 @@
 
     .pic:hover{
         transform: scale(1.1); /* Zoom in 10% */
-        padding: 1rem;
+        padding: .5rem;
         background-color: var(--primary-color);
         border-radius:.5rem;
     }
