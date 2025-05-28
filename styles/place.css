@@ -1,0 +1,91 @@
+:root{
+    --primary-color:#1F58A3;
+    --secondary-color:#d93434;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: roboto, sans-serif;
+    width: 100%;
+}
+
+h1{
+    font-size: 1.6rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header,
+footer{
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+header{
+    background-color: var(--primary-color);
+    height: 12vh;
+    padding: 1.5rem;
+    margin: 0;
+}
+hr{
+    height: 1.5rem;
+    background-color: var(--secondary-color);
+}
+
+/* main{
+   
+} */
+
+.hero img{
+    height: 86.5vh;
+    width: 100%;
+    border-bottom: solid 4px var(--primary-color);
+    z-index: -1;
+}
+
+.content{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 4%;
+}
+
+.content .card{
+    border-bottom: solid .2px lightgray;
+}
+
+.content table{
+    line-height: 2rem;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.content table th{
+    text-align: right;
+    width: 50%;
+}
+.content table td{
+    padding-left:.5rem;
+}
+
+.content .weather img{
+    margin-left: 45%;
+}
+
+
+footer{
+    padding: 2%;
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
