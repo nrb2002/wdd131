@@ -34,13 +34,7 @@ footer{
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-}
-
-header{
-    background-color: var(--primary-color);
-    height: 12vh;
     padding: 1.5rem;
-    margin: 0;
 }
 hr{
     height: 1.5rem;
@@ -68,9 +62,6 @@ img {
     display: block;
     border-bottom: solid 4px var(--primary-color);
 }
-
-
-
 .content{
     display: grid;
     gap: 1rem;
@@ -124,7 +115,7 @@ footer{
     }
     .hero img {
         width: 100%;
-        height: auto;
+        height: 100%;
         aspect-ratio: 1 / 1;
     }
 }
@@ -150,8 +141,6 @@ footer{
         overflow: hidden;
     }
     .hero img {
-        width: 100%;
-        height: 100%;
         aspect-ratio: 2 / 1;
     }
 
@@ -161,7 +150,6 @@ footer{
         z-index: 1;
         padding: 2rem;
         height:43rem;
-        /* max-width: 1400px; */
         margin: 0 auto;
     }
 
@@ -195,7 +183,6 @@ footer{
         border-bottom: none;
     }
     footer{
-    padding: 1.5%;
     font-size: .95rem;
     line-height: 1.5rem;
 }
