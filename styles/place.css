@@ -17,11 +17,12 @@ body{
 }
 
 h1{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    padding: .5rem;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--primary-color);
     text-align: center;
     padding: 1.5rem;
@@ -29,7 +30,7 @@ h2{
 
 header,
 footer{
-    margin: 0 auto;
+    height: auto;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
@@ -95,7 +96,13 @@ footer{
 }
 
 
-@media screen and (min-width:512px) {
+@media screen and (min-width:512) {
+    h1{
+        font-size: 1.6rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
     .weather img{
         width: 50px;
     }
@@ -105,6 +112,9 @@ footer{
 }
 
 @media screen and (min-width:769px) {
+    h1{
+        font-size: 2rem;
+    }
     h2{
         background-color:var(--secondary-color);
         color:white;
@@ -133,21 +143,22 @@ footer{
         position: relative;
         z-index: 1;
         padding: 2rem;
-        height:75vh;
-        max-width: 1400px;
+        height:auto;
+        /* max-width: 1400px; */
         margin: 0 auto;
     }
 
     .content{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 0;
     }
 
     .card{
         background: var(--tertiary-color);
         opacity:.85;
         z-index: 100;
-        width: 25%;
+        width: 23rem;
         height: fit-content;
         font-size: 1rem;
     }
@@ -164,6 +175,9 @@ footer{
         content: "⛅";
     }
     .card:first-child{
-    border-bottom: none;
-}
+        border-bottom: none;
+    }
+    table th{
+        /* text-align: top; */
+    }
 }
