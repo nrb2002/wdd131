@@ -48,15 +48,28 @@ hr{
     border: none;
 }
 
-/* main{
-   
-} */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-.hero img{
-    height: 86.5vh;
+.hero {
     width: 100%;
+    aspect-ratio: 1 / 2;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 2;
+    object-fit: cover;
+    display: block;
     border-bottom: solid 4px var(--primary-color);
 }
+
+
 
 .content{
     display: grid;
@@ -109,6 +122,11 @@ footer{
     .card{
         font-size:.9rem;
     }
+    .hero img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
 }
 
 @media screen and (min-width:769px) {
@@ -131,11 +149,10 @@ footer{
         z-index: -1; /* Puts it behind everything */
         overflow: hidden;
     }
-
     .hero img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Makes it behave like a background image */
+        aspect-ratio: 2 / 1;
     }
 
     /* Make content sit on top */
@@ -143,7 +160,7 @@ footer{
         position: relative;
         z-index: 1;
         padding: 2rem;
-        height:auto;
+        height:43rem;
         /* max-width: 1400px; */
         margin: 0 auto;
     }
@@ -164,7 +181,7 @@ footer{
     }
     
     .weather{
-        margin-top: 20%;
+        margin-top: 20rem;
     }
     
     .weather img{
@@ -177,7 +194,9 @@ footer{
     .card:first-child{
         border-bottom: none;
     }
-    table th{
-        /* text-align: top; */
-    }
+    footer{
+    padding: 1.5%;
+    font-size: .95rem;
+    line-height: 1.5rem;
+}
 }
