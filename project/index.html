@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Home - FOUNTEX Garage</title>
+  
+  <meta 
+      name="description" 
+      content="WDD 131 – Dynamic Web Fundamentals -
+              Baron Tshibasu -
+              This home page allows the author to demonstrate basic knowledge 
+              of HTML, CSS, and JavaScript.">
+  
+  <meta name="author" content="Baron Tshibasu">
+
+  <!-- CSS links -->
+    <link rel="stylesheet" href="styles/fountex-garage.css">
+
+    <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Imperial+Script&family=Lavishly+Yours&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Javascript files -->
+   <script src="scripts/fountex-garage.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">FOUNTEX GARAGE</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Performance. Precision. Passion.</h1>
+      <p>Specialists in Asian vehicle maintenance and tuning.</p>
+      <a href="#contact" class="btn">Book an Appointment</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Performance Tuning</h3>
+        <p>Boost your car's power and responsiveness with expert tuning.</p>
+      </div>
+      <div class="card">
+        <h3>Routine Maintenance</h3>
+        <p>From oil changes to filter replacements, we’veGot you covered.</p>
+      </div>
+      <div class="card">
+        <h3>Engine Diagnostics</h3>
+        <p>Modern tools to quickly diagnose and resolve engine issues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>FOUNTEX Garage is built on performance passion and decades of technical expertise. We specialize in Japanese automotive brands, blending advanced diagnostics with motorsport-ade precision.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FOUNTEX Garage. All rights reserved.</p>
+    <p><a href="siteplan.html">Site Plan</a></p>
+  </footer>
+</body>
+</html>
