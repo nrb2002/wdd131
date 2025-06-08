@@ -27,34 +27,59 @@
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  <header class="nav">
-    <div class="logo">FOUNTEX GARAGE</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-    <main class="siteplan">
+    <header>
+        <div class="logo">
+            <img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250">
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+        <!-- Side Menu -->
+        <nav class="sidemenu" id="sidemenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="siteplan">        
         <section class="hero page" id="page">
+            <picture class="bg-picture">
+                <source media="(min-width: 769px)" srcset="images/garage-large.webp">
+                <source media="(min-width: 426px)" srcset="images/garage-medium.webp">
+                <img src="images/garage-small.jpg" alt="" aria-hidden="true" width="500"/>
+            </picture>
             <div class="hero-text">
             <h1>Site Plan</h1>      
             </div>
         </section>
         <section>
             <h2>Site Name & Logo</h2>
-            <p class="sitename"><a href="index.html" >fountex-garage.cd</a></p>
+            <p class="sitename"><a href="index.html" >fountex-garage.cd</a></p><br>
             <div class="logo">
-                <img src="" alt="Logo Fountex - Garage">
+                <img src="images/logo-fountex-gr.webp" alt="Logo Fountex - Garage" width="300">
             </div>
-        </section>
+        </section><hr class="shadow-line">
         <section>
             <h2>Purpose</h2>
             <p>The website presents FOUNTEX - Garage, a modern auto service startup specializing in maintenance, repairs, and diagnostics for Asian car brands—particularly Japanese makes like Toyota, Hyundai, Honda, Nissan, Mazda,  and Subaru. </p>
-        </section>
+        </section><hr class="shadow-line">
         <section>
             <h2>Scenarios</h2>                
             <ul>
@@ -63,22 +88,22 @@
                 <li>My car just broke down while driving; who can I call for help? </li>
                 <li>How can I get the price of a bulk product for my company's fleet?</li>
             </ul>                
-        </section>
+        </section><hr class="shadow-line">
         <section>
             <h2>Color Schema</h2>
             <div class="vertical">
                 <table >
                     <tr>
                         <th class="primary">Primary</th>
-                        <td class="primary">Prussian blue</td>
+                        <td class="primary">Earth Yellow</td>
                     </tr>
                     <tr>
                         <th class="secondary">Secondary</th>
-                        <td class="secondary">Penn red</td>
+                        <td class="secondary">Prussian Blue</td>
                     </tr>
                     <tr>
                         <th class="accent">Accent Color</th>
-                        <td clAss="accent">Earth yellow</td>
+                        <td class="accent">Penn red</td>
                     </tr>
                     <tr>
                         <th class="background-1">Background 1</th>
@@ -94,7 +119,7 @@
                     </tr>
                     <tr>
                         <th class="text-color">Text Color</th>
-                        <td class="text-color">Whiter</td>
+                        <td class="text-color">Prussian Blue</td>
                     </tr>                
                 </table>
             </div>
@@ -124,16 +149,16 @@
                     </tbody>
                 </table>
             </div><br>
-            <p>Color Schema link: <a href="https://coolors.co/02384f-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff">https://coolors.co/02384f-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff</a></p>
+            <p>Color Schema link: <a href="https://coolors.co/011f2c-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff">https://coolors.co/02384f-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff</a></p>
             
-        </section>
+        </section><hr class="shadow-line">
         <section>
             <h2>Typography</h2>
             <ul>
                 <li class="heading">Headings: Roboto, sans-serif</li>
                 <li class="paragraph">Paragraphs: Poppins, sans-serif</li>
             </ul>
-        </section>
+        </section><hr class="shadow-line">
         <section>
             <h2>Wireframe</h2>
             <h3>Mobile View</h3>
