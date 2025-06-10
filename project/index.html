@@ -28,15 +28,35 @@
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  <header class="nav">
-    <div class="logo">FOUNTEX GARAGE</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header>
+    <div class="logo">
+        <img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250">
+    </div>
+
+    <nav class="menu">
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <!-- Side Menu -->
+    <nav class="sidemenu" id="sidemenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
     </nav>
   </header>
 
