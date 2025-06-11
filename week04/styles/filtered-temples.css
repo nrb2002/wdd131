@@ -20,7 +20,7 @@ body{
 }
 h1{
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: var(--primary-color);
     color: var(--accent-1);
 }
@@ -50,7 +50,12 @@ nav, footer{
     padding-left: .5rem;
 }
 
-.logo:hover{
+.logo:hover,
+.logo a:hover{
+    color: var(--accent-1);
+}
+.logo a{
+    text-decoration: none;
     color: var(--secondary-color);
 }
 nav ul{
@@ -74,6 +79,7 @@ nav a:hover,
     font-size: 1.2rem;
     font-weight: bold;
     transition: .5s;
+    text-decoration: underline;
 }
 
 /* when the button is clicked - the open class is toggled (added/removed) */
@@ -103,16 +109,16 @@ nav ul.open {
 }
 
 main{
-    max-width:800px ;
+    width:100%;
     margin: 0 auto;
     height: auto;
 }
 
 .temple-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem 1rem 0;
 }
 
 .temple-card {
@@ -121,6 +127,8 @@ main{
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .temple-card:hover {
@@ -134,7 +142,8 @@ main{
 }
 
 .temple-details {
-    padding: 15px;
+    padding: .5rem;
+    text-align: center;
 }
 
 .temple-details h3 {

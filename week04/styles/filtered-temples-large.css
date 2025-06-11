@@ -25,9 +25,12 @@
 	}
     
     main{
-        min-height: 85vh;
+        max-width: 60%;
     }
 
+    .temple-card{
+        width: 280px;
+    }
     .temple-card img {
         height: 150px;
     }

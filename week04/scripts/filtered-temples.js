@@ -118,21 +118,50 @@ const temples = [
   }
 ];
 
-const container = document.getElementById("templeContainer");
+function displayTemples(templesData){  
+  const container = document.getElementById("templeContainer");
+  container.innerHTML = "";
+  templesData.forEach(data => {
+    const card = document.createElement("div");
+    card.className = "temple-card";
 
-temples.forEach(temple => {
-  const card = document.createElement("div");
-  card.className = "temple-card";
+    card.innerHTML = `
+      <img src="${data.imageUrl}" alt="${data.templeName}" loading="lazy" >
+      <div class="temple-details">
+        <h3>${data.templeName}</h3>
+        <p><strong>Location:</strong> ${data.location}</p>
+        <p><strong>Dedicated:</strong> ${data.dedicated}</p>
+        <p><strong>Area:</strong> ${data.area.toLocaleString()} sq ft</p>
+      </div>      
+    `;
+    
+    container.appendChild(card);
+  });
+}
 
-  card.innerHTML = `
-    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" >
-    <div class="temple-details">
-      <h3>${temple.templeName}</h3>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-    </div>
-  `;
 
-  container.appendChild(card);
-});
+// Get dedication year
+function getYear(dedicatedDate) {
+  return parseInt(dedicatedDate.split(",")[0].trim());
+}
+
+// Filter functions
+const showAll = () => displayTemples(temples);
+const showOld = () => displayTemples(temples.filter(temple => getYear(temple.dedicated) < 1900));
+const showNew = () => displayTemples(temples.filter(temple => getYear(temple.dedicated) > 2000));
+const showLarge = () => displayTemples(temples.filter(temple => temple.area > 90000));
+const showSmall = () => displayTemples(temples.filter(temple => temple.area < 10000));
+
+// Event listeners
+// Remove 'active' from all
+document.querySelectorAll(".menu-link").forEach(btn => btn.classList.remove("active"));
+
+document.getElementById("showAll").addEventListener("click", e => { e.preventDefault(); showAll(); this.classList.add("active"); });
+document.getElementById("templesOld").addEventListener("click", e => { e.preventDefault(); showOld(); this.classList.add("active"); });
+document.getElementById("templesNew").addEventListener("click", e => { e.preventDefault(); showNew(); this.classList.add("active"); });
+document.getElementById("templesLarge").addEventListener("click", e => { e.preventDefault(); showLarge(); this.classList.add("active");});
+document.getElementById("templesSmall").addEventListener("click", e => { e.preventDefault(); showSmall(); this.classList.add("active"); });
+
+// Load all by default
+showAll();
+
