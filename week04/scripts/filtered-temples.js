@@ -113,9 +113,6 @@ const temples = [
 function displayTemples(templesData){  
   const container = document.getElementById("templeContainer");
   container.innerHTML = "";
-  // Remove 'active' from all
-  document.querySelectorAll(".menu-link").forEach(btn => btn.classList.remove("active"));
-
   templesData.forEach(data => {
     const card = document.createElement("div");
     card.className = "temple-card";
@@ -147,6 +144,8 @@ const showLarge = () => displayTemples(temples.filter(temple => temple.area > 90
 const showSmall = () => displayTemples(temples.filter(temple => temple.area < 10000));
 
 // Event listeners
+// Remove 'active' from all
+document.querySelectorAll(".menu-link").forEach(btn => btn.classList.remove("active"));
 
 document.getElementById("showAll").addEventListener("click", e => { e.preventDefault(); showAll(); this.classList.add("active"); });
 document.getElementById("templesOld").addEventListener("click", e => { e.preventDefault(); showOld(); this.classList.add("active"); });
