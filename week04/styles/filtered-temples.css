@@ -17,6 +17,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     background-color: var(--background);
+    overflow: hidden;
 }
 h1{
     padding: 1rem;
@@ -32,16 +33,7 @@ h2{
     margin-top: 0;
     background: var(--accent-1);
 }
-/* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    opacity: .9;
-} */
+
 /* nav,  */
 footer{    
     background-color: var(--primary-color);
@@ -49,43 +41,6 @@ footer{
     padding: .5rem;
 }
 
-/* .logo{
-    font-size: 1rem;
-    font-weight: bold;
-    padding-left: .5rem;
-}
-
-.logo:hover,
-.logo a:hover{
-    color: var(--accent-1);
-}
-.logo a{
-    text-decoration: none;
-    color: var(--secondary-color);
-}
-nav ul{
-    width: 100%;
-    display: none;
-}
-
-nav li{    
-    padding: 1rem;
-    list-style:none;
-    text-align: center;
-}
-nav a{
-    text-decoration: none;
-    color: var(--accent-1);
-}
-
-nav a:hover,
-.active{
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: .5s;
-    text-decoration: underline;
-}
 
 /* when the button is clicked - the open class is toggled (added/removed) */
 nav ul.open {
@@ -210,6 +165,7 @@ main{
     gap: 1.5rem;
     padding: 0 1rem;
 }
+
 
 .temple-card {
     background: white;
