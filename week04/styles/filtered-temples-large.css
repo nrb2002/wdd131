@@ -2,30 +2,59 @@
     body{
         font-size: 1.2rem;
     }
-    header{
-        display: grid;
-        grid-template-columns: 1fr auto;
-    }
+    
     h2{
         color: var(--primary-color);
     }   
     
-    .logo{
+    /* .logo{
         font-size: 1.5rem;
         padding: 1rem 2rem;
     }
     
-    nav ul{
-        display: flex;
-        justify-content: space-evenly; 
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav li {
+        padding: 0 1rem;
     }
 
     #hambMenu {
-		display: none; /* hide hamburger button */
-	}
+		display: none; 
+	} */
+
+    /* Hide mobile button */
+    #hambMenu {
+        display: none;
+    }
+
+    /* Nav list becomes a horizontal menu */
+    .nav-list {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-list li {
+        margin: 0 1rem;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+    }
+    }
     
     main{
         max-width: 60%;
+        margin: 0 auto;
     }
 
     .temple-card{
@@ -34,4 +63,10 @@
     .temple-card img {
         height: 150px;
     }
+    .temple-card,
+    .temple-card img {
+        transition: all 0.3s ease-in-out;
+    }
+
 }
+

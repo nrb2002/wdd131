@@ -14,7 +14,7 @@
 }
 
 body{
-    font-family: roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     background-color: var(--background);
 }
@@ -32,19 +32,24 @@ h2{
     margin-top: 0;
     background: var(--accent-1);
 }
-
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 nav{
     display: flex;
     justify-content: space-between;
     opacity: .9;
-}
-nav, footer{    
+} */
+/* nav,  */
+footer{    
     background-color: var(--primary-color);
     color: white;
     padding: .5rem;
 }
 
-.logo{
+/* .logo{
     font-size: 1rem;
     font-weight: bold;
     padding-left: .5rem;
@@ -84,7 +89,9 @@ nav a:hover,
 
 /* when the button is clicked - the open class is toggled (added/removed) */
 nav ul.open {
-	display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* small view navigation */
@@ -101,12 +108,95 @@ nav ul.open {
 
 #hambMenu::before {
 	content: "☰";
+    transition: content 0.3s ease;
 }
 
 #hambMenu.open::before {
 	/*content: "❎";*/
   content: "X";
+} */
+
+
+/* ─── HEADER LAYOUT & BASE ───────────────────────────────────────────────── */
+
+header {
+  background: var(--primary-color);
+  color: var(--accent-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  box-shadow: var(--shadow);
 }
+
+/* Logo */
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header .logo a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+header .logo a:hover {
+  color: var(--accent-1);
+}
+
+/* Hamburger button sits on the right (mobile) */
+#hambMenu {
+  /* your existing styles for the button */
+}
+
+/* ─── NAVIGATION ─────────────────────────────────────────────────────────── */
+
+nav {
+  /* take up available space on desktop */
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  padding: .5rem;
+}
+
+/* Hide nav-list by default on mobile (will be shown by JS) */
+.nav-list {
+  display: none;
+  flex-direction: column;
+  background: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  z-index: 5;
+}
+
+/* Show when open */
+.nav-list.open {
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+.nav-list li {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+.nav-list a {
+  color: var(--accent-1);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.nav-list a:hover,
+.nav-list a.active {
+  color: var(--secondary-color);
+}
+
 
 main{
     width:100%;
@@ -118,7 +208,7 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.5rem;
-    padding: 0 1rem 1rem 0;
+    padding: 0 1rem;
 }
 
 .temple-card {
@@ -139,6 +229,7 @@ main{
     width: 100%;
     height: 200px;
     display: block;
+    color: #222;
 }
 
 .temple-details {
@@ -149,13 +240,13 @@ main{
 .temple-details h3 {
     margin: 0 0 10px;
     font-size: 1.2rem;
-    color: #333;
+    /* color: #333; */
 }
 
 .temple-details p {
     margin: 5px 0;
     font-size: 0.95rem;
-    color: #555;
+    /* color: #555; */
 }
 
 

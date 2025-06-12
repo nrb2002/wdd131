@@ -25,10 +25,10 @@
     <script src="week04/scripts/getdates.js" defer></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1 class="logo"><a href="filtered-temples.html">Temple Album</a></h1>
-        <button id="hambMenu" aria-label="hambMenu"></button>
-        <nav> 
+        <button id="hambMenu" aria-label="Menu"><span class="hamb-icon"></span></button>
+        <nav aria-label="Main navigation"> 
             <ul>                
                 <li><a class="menu-link active" href="filtered-temples.html" title="Display all the temples stored in the array" id="showAll">Home</a></li>
                 <li><a class="menu-link"  href="#" title="Show temples built before 1900" id="templesOld">Old</a></li>
@@ -37,7 +37,24 @@
                 <li><a class="menu-link" href="#" title="Show temples smaller than 10,000 square feet" id="templesSmall">Small</a></li>
             </ul>            
         </nav>
-    </header>
+    </header> -->
+
+    <header>
+        <h1 class="logo"><a href="filtered-temples.html">Temple Album</a></h1>
+        <button id="hambMenu" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mainNav">
+            <span class="hamb-icon"></span>
+        </button>
+        <nav>
+            <ul id="mainNav" class="nav-list">
+            <li><a class="menu-link active" href="filtered-temples.html" id="showAll">Home</a></li>
+            <li><a class="menu-link" href="#" id="templesOld">Old</a></li>
+            <li><a class="menu-link" href="#" id="templesNew">New</a></li>
+            <li><a class="menu-link" href="#" id="templesLarge">Large</a></li>
+            <li><a class="menu-link" href="#" id="templesSmall">Small</a></li>
+            </ul>
+        </nav>
+        </header>
+
     <h2 class="page-title">Home Page</h2>
     <main>        
         <div class="temple-container" id="templeContainer"></div>

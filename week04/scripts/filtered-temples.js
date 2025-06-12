@@ -1,27 +1,19 @@
-const hamButton = document.getElementById('hambMenu');
-const ul = document.querySelector('ul');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("hambMenu");
+  const navList = document.getElementById("mainNav");
 
-hamButton.addEventListener('click', () => {
-	ul.classList.toggle('open');
-	hamButton.classList.toggle('open');
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("open");
+    navList.classList.toggle("open");
+
+    // Accessibility toggle
+    const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", !isExpanded);
+  });
 });
 
-// Handle responsive display
-// function updateNavDisplay() {
-//   if (window.innerWidth > 512) {
-//     ul.classList.add('flex-display');
-//     ul.classList.remove('open');
-//     hamButton.classList.remove('open');
-//   } else {
-//     ul.classList.remove('flex-display');
-//   }
-// }
 
-// // Run on page load
-// updateNavDisplay();
 
-// // Run on resize
-// window.addEventListener('resize', updateNavDisplay);
 
 window.addEventListener('resize', () =>{
 	if (window.innerWidth > 512) {
@@ -127,7 +119,6 @@ function displayTemples(templesData){
   templesData.forEach(data => {
     const card = document.createElement("div");
     card.className = "temple-card";
-
     card.innerHTML = `
       <img src="${data.imageUrl}" alt="${data.templeName}" loading="lazy" >
       <div class="temple-details">
@@ -140,8 +131,8 @@ function displayTemples(templesData){
     
     container.appendChild(card);
   });
+  
 }
-
 
 // Get dedication year
 function getYear(dedicatedDate) {
