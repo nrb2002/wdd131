@@ -22,9 +22,4 @@ let count = Number(localStorage.getItem(STORAGE_KEY)) || 0;
 count += 1;
 localStorage.setItem(STORAGE_KEY, count);
 
-counterEl.textContent = `Total reviews you’ve submitted in this browser: ${count}`;
-
-/* ─────────────────────────────────────────────────────────
- *           FOOTER YEAR
- * ───────────────────────────────────────────────────────── */
-document.querySelector("#year").textContent = new Date().getFullYear();
+counterEl.textContent = `Total reviews you’ve submitted in this browser: ${count}.`;
