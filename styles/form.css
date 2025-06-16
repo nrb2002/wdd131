@@ -5,6 +5,7 @@
   --bg:      #f1f1f1;
   --white:   #ffffff;
   --radius:  0.4rem;
+  --input-border: 1px solid #ccc;
 }
 
 *,
@@ -43,7 +44,7 @@ label { font-weight: 600; }
 select, input[type="text"], input[type="date"], textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: var(--input-border);
   border-radius: var(--radius);
 }
 
@@ -57,7 +58,11 @@ input[type="submit"] {
 }
 input[type="submit"]:hover { opacity: .85; }
 
-fieldset { border: 0; padding: 0; }
+fieldset { 
+  border: var(--input-border);
+  border-radius: var(--radius); 
+  padding: 1rem; 
+}
 .rating input { display: none; }
 .rating label {
   cursor: pointer;
@@ -69,3 +74,47 @@ fieldset { border: 0; padding: 0; }
 
 main ul { list-style: none; padding: 0; }
 main ul li { margin: .25rem 0; }
+
+/* stars */
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+	color: #000;
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
+/* stars */
+
+/* Features */
+.features{
+  display: flex;
+  flex-direction: column;
+}
+/* Features */
