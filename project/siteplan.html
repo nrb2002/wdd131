@@ -27,15 +27,15 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" loading="eager" width="250">
+            <a href="index.html"><img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250"></a>
         </div>
 
         <nav class="menu">
             <ul class="menu-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <!-- Hamburger Icon -->
@@ -50,9 +50,9 @@
         <nav class="sidemenu" id="sidemenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -93,7 +93,7 @@
                 <table >
                     <tr>
                         <th class="primary">Primary</th>
-                        <td class="primary">Earth Yellow</td>
+                        <td class="primary">Butterscotch</td>
                     </tr>
                     <tr>
                         <th class="secondary">Secondary</th>
@@ -110,15 +110,7 @@
                     <tr>
                         <th class="background-2">Background 2</th>
                         <td class="background-2">Mint cream</td>
-                    </tr>  
-                    <tr>
-                        <th class="background-3">Background 3</th>
-                        <td class="background-3">French gray</td>
-                    </tr>
-                    <tr>
-                        <th class="text-color">Text Color</th>
-                        <td class="text-color">Prussian Blue</td>
-                    </tr>                
+                    </tr>               
                 </table>
             </div>
             <div class="horizontal">
@@ -127,27 +119,23 @@
                         <tr>
                             <th class="primary">Primary</th>
                             <th class="secondary">Secondary</th>
-                            <th class="accentOne">Accent-1</th>
-                            <th class="accentTwo">Accent-2</th>
+                            <th class="accent">Accent Color</th>
+                            <th class="alice-blue">Background 1</th>
+                            <th class="mint-cream">Background 2</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="primary"></td>
-                            <td class="secondary"></td>
-                            <td class="accentOne"></td>
-                            <td class="accentTwo"></td>
-                        </tr>
-                        <tr>
-                            <td class="primary"></td>
-                            <td class="secondary"></td>
-                            <td class="accentOne"></td>
-                            <td class="accentTwo"></td>
+                            <td class="primary">Butterscotch</td>
+                            <td class="secondary">Prussian blue</td>
+                            <td class="accent">Penn red</td>
+                            <td class="alice-blue">Alice blue</td>
+                            <td class="mint-cream">Mint cream</td>
                         </tr>
                     </tbody>
                 </table>
             </div><br>
-            <p>Color Schema link: <a href="https://coolors.co/011f2c-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff">https://coolors.co/02384f-980202-db9d47-dae3e7-eaf2ef-bfc0cd-ffffff</a></p>
+            <p>Color Schema link: <a href="https://coolors.co/cb9447-02273c-980202-dae3e7-eaf2ef" target="_blank">https://coolors.co/cb9447-02273c-980202-dae3e7-eaf2ef</a></p>
             
         </section>
         <section>
@@ -166,8 +154,9 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 FOUNTEX Garage. All rights reserved.</p>
-        <p><a href="siteplan.html">Site Plan</a></p>
+        <p>&copy; <span id="currentyear"></span><span> FOUNTEX Garage. All rights reserved.</span> | <span><a href="siteplan.html">Site Plan</a></span></p>
+        <p>Baron Tshibasu - Kinshasa, DR Congo</p><br>
+        <p><i><span> Last modification: </span><span id="lastModified"></i></span> </p>
     </footer>
     </body>
 </html>
