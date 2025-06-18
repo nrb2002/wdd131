@@ -17,20 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     contactForm.reset();
   });
 
-  // Smooth scroll for nav links
-  document.querySelectorAll(".menu-links a").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-});
-
 const hamburger = document.getElementById('hamburger');
 const overlay = document.getElementById('overlay');
 const sidemenu = document.getElementById('sidemenu');

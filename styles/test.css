@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+table,
+thead,
+td{
+  padding: 10px;
+}
+
+/* tr:nth-child(even) {background-color: skyblue} */
+
+/* tr:nth-child(odd) {background-color: skyblue} */
+
+tr:nth-child(:not(first)) {background-color: skyblue}
+
+
+span p {font-size: 1.5rem}
+
+@media only screen and (min-width: 32rem) {
+     span {font-size: 2rem}
+}

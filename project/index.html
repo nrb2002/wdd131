@@ -40,6 +40,7 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#appointment" class="btn booking">Book an Appointment</a></li>
         </ul>
     </nav>
     <!-- Hamburger Icon -->
@@ -57,26 +58,32 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#appointment" class="btn booking">Book an Appointment</a></li>
         </ul>
     </nav>
   </header>
   <main>
+     <!-- ======  HERO  ====== -->
     <section class="hero" id="home">
       <picture class="bg-picture">
-        <source media="(min-width: 769px)" srcset="images/garage-large.webp">
-        <source media="(min-width: 426px)" srcset="images/garage-medium.webp">
+        <source media="(min-width: 768px)" srcset="images/garage-large.webp">
+        <source media="(min-width: 425px)" srcset="images/garage-medium.webp">
         <img src="images/garage-small.jpg" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
       </picture>
       <div class="hero-text">
         <h1>Performance. Precision. Passion.</h1>
         <p>We are specialists in Asian vehicle maintenance and tuning.</p>
-        <a href="#contact.html" class="btn">Book an Appointment</a>
+        
       </div>
     </section>
+
+     <!-- ======  ABOUT  ====== -->
     <section class="about" id="about">
-      <h2>About Us</h2>
-      <p>Based in the beautiful city of Kinshasa (DRC), FOUNTEX Garage is built on performance passion and decades of technical expertise. We specialize in Japanese automotive brands, blending advanced diagnostics with motorsport-ade precision.</p>
+      <h2>FOUNTEX Garage is built on performance passion and decades of technical expertise. </h2>
+      <p>Based in the beautiful city of Kinshasa (DRC), we specialize in Japanese automotive brands, blending advanced diagnostics with motorsport-ade precision.</p>
     </section>
+
+     <!-- ======  SERVICES SECTION  ====== -->
     <section class="services" id="services">
       <h2>Our Services</h2>
       <div class="service-cards">
@@ -105,9 +112,9 @@
 
       <div class="slider">
         <label class="slide" for="s1" id="slide1">
-          <!-- <source media="(min-width: 769px)" srcset="images/garage-large.webp">
-          <source media="(min-width: 426px)" srcset="images/garage-medium.webp"> -->
-          <img src="images/gallery1.webp" alt="Dyno tuning at FOUNTEX Garage" loading="lazy" aria-hidden="true" width="500">
+          <source media="(min-width: 768px)" srcset="images/fountex-gallery1-large.webp">
+          <source media="(min-width: 425px)" srcset="images/fountex-gallery1-medium.webp">
+          <img src="images/fountex-gallery1.webp" alt="Dyno tuning at FOUNTEX Garage" loading="lazy" aria-hidden="true" width="500">
         </label>
 
         <label class="slide" for="s2" id="slide2">
@@ -130,48 +137,79 @@
           <a href="#slide4"></a>
         </div>
       </div>
-    </section> 
+    </section>
     
-    <!-- ======  Appointment Booking  ====== -->
-    <section class="appointment">
+    <!-- ======  APPOINTMENT BOOKING  ====== -->
+    <section class="appointment" id="appointment">
       <h2>Book an Appointment</h2>
       <form id="appointmentForm">
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required/>
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="+243 000 000 000" required/>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required/>
-
-        <label for="vehicle">Vehicle Make & Model</label>
+        <fieldset>
+          <legend>Customer Info</legend>
+          <label for="name">Full Name *
+          <input type="text" id="name" name="name" required/>
+          </label>
+          <label for="phone">Phone Number
+          <input type="tel" id="phone" name="phone" placeholder="+243 000 000 000" required/>
+          </label>
+          <label for="email">Email Address
+          <input type="email" id="email" name="email" required/>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Vehicle Info</legend>
+          <label for="vehicle">Vehicle Make & Model
         <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Corolla 2021" required/>
-
-        <label for="service">Service Type</label>
-        <select id="service" name="service" required>
-          <option value="">-- Select a Service --</option>
-          <!-- Options populated via services.js javascript file-->
-        </select>
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" name="date" required/>
-
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about the issue or request..."></textarea>
-
+        </fieldset>
+        <fieldset>
+          <legend>Service Needed</legend>
+          <label for="service">Service Type
+          <select id="service" name="service" required>
+            <option value="">-- Select a Service --</option>
+            <!-- Options populated via services.js javascript file-->
+          </select>
+          </label>
+          <label for="date">Preferred Date
+          <input type="date" id="date" name="date" required/>
+          </label>
+          <label for="notes">Additional Notes
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about the issue or request..."></textarea>
+          </label>
+        </fieldset>
+        </label>
+        
         <button type="submit">Confirm my appointment</button>
       </form>
     </section>
+
+    <!-- ======  LOCATION  ====== -->
     <section class="location" id="location" aria-label="FOUNTEX location">
       <h2>Location</h2>
       <p>We are located in Kasa-Vubu Municipality, Kinshasa, DR Congo. </p><br>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15913.46617949044!2d15.293143409741191!3d-4.342115933906857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3137716bbd5f%3A0xcfa153684796f172!2sKasa-Vubu%2C%20Kinshasa!5e0!3m2!1sen!2scd!4v1750152852953!5m2!1sen!2scd" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
+
+  <!-- ======  FOOTER  ====== -->
   <footer>
-    <p>&copy; <span id="currentyear"></span><span> FOUNTEX Garage. All rights reserved.</span> | <span><a href="siteplan.html">Site Plan</a></span></p>
-    <p>Baron Tshibasu - Kinshasa, DR Congo</p><br>
+    <div>
+      <p>&copy; <span id="currentyear"></span> FOUNTEX Garage. All rights reserved.</p>
+      <p>Baron Tshibasu - Kinshasa, DR Congo</p><br>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="siteplan.html">Site Plan</a></li>
+      </ul>
+
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://www.freepik.com/search?format=search&last_filter=selection&last_value=1&query=Garage&selection=1" target="_blank" rel="noopener noreferrer">FREEPIK</a></li>
+        <li><a href="https://unsplash.com/s/photos/car-garage" target="_blank" rel="noopener noreferrer">Unsplash</a></li>
+        <li><a href="https://www.pexels.com/search/garage/" target="_blank" rel="noopener noreferrer">Pexels</a></li>
+      </ul>
+    </div>    
     <p><i><span> Last modification: </span><span id="lastModified"></i></span> </p>
   </footer>
 </body>

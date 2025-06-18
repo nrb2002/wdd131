@@ -7,7 +7,7 @@
   --mint-cream: #eaf2ef;
   --background-1:var(--alice-blue);
   --background-2:var(--mint-cream);
-  --white:#ffff;
+  --white:white;
   --rich-black:#011b28; 
   --text-color: var(--white);
   --radius: 4px;
@@ -22,27 +22,74 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-text);
   background-color: var(--background-1);
   color: var(--secondary-color);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
+  display: block;
+  gap: 1.25rem;
+  padding: 2rem 1rem;
+  background: var(--mint-cream);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
   margin: 0 auto;
+}
+/* Labels above inputs */
+form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: var(--secondary-color);
+}
+fieldset{
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  color: var(--accent-color);
+  font-weight: 500;
 }
 input,
 textarea,
 select{
-  padding: 1rem;
-  border: none;
-  border-radius: 4px;
+  width: 100%;
+  padding: 0.9rem 1rem;
   font-size: 1rem;
+  border: 2px solid var(--alice-blue);
+  border-radius: var(--radius);
+  background: var(--white);
+  transition: border 0.25s;
+}
+ input:focus,
+ select:focus,
+ textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(203, 148, 71, 0.25); /* primary‑color, 25% */
+}
+
+/* Button */
+form button {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: var(--accent-color);
 }
 p{
   color: var(--secondary-color);
@@ -50,7 +97,6 @@ p{
 label{
   font-weight: 500;
 }
-
 header{
   display: grid;
   grid-template-columns: 1fr auto;
@@ -63,6 +109,7 @@ header{
   z-index: 1000;
   height: 6rem;
 }
+
 
 header .logo {
   font-size: 1.5rem;
@@ -80,7 +127,7 @@ header .logo {
   gap: 1.5rem;
 }
 
-.menu-links a {
+.menu-links a{
   color: var(--secondary-color);
   text-decoration: none;
   font-weight: 500;
@@ -90,6 +137,19 @@ header .logo {
 .menu-links a:hover {
   color: var(--accent-color);
 }
+.menu-links .booking{
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border-radius: 25px;
+}
+
+.menu-links .booking:hover {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+}
+
 /* Hamburger Button */
 .hamburger {
   position: fixed;
@@ -178,6 +238,11 @@ header .logo {
   transition: color 0.2s;
 }
 
+.sidemenu .menu-links a:hover {
+  color: white;
+  border-bottom: solid var(--primary-color);
+  padding: 2rem;
+}
 .sidemenu.open ul li a:hover {
   color: var(--secondary-color);
 }
@@ -190,10 +255,15 @@ header .logo {
   padding: 2rem;
 }
 
-.hero.page {
-  height: 60vh;
+.hero-page .bg-picture{
+  height: 40vh;
 }
-
+.hero-text{
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--radius);
+  opacity: .9;
+}
 .hero-text h1 {
   font-family: var(--font-headings);
   font-size: 3rem;
@@ -227,9 +297,10 @@ button:hover,
   color: var(--primary-color);
 }
 
-.services, 
-.contact {
-  max-width: 1200px;
+.services,
+.about p,
+.page-content{
+  max-width: 992px;
 }
 
 
@@ -242,7 +313,7 @@ h2, .h2 {
   text-align: center;
 }
 section{
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   margin: 0 auto;
 }
 section:nth-child(even){
@@ -286,6 +357,7 @@ section:nth-child(even){
 }
 iframe{
   width: 100%;
+  height: 40vh;
 }
 
 /* ----- slider wrapper ----- */
@@ -341,14 +413,6 @@ input[type=radio]{position:absolute;opacity:0}
 input[type=radio]:checked + .slide + .dots a[href="#{id}"],
 input[type=radio]:checked ~ .dots a[href="#{id}"]{background:var(--dot-active)}
 
-/* ----- responsive tweaks ----- */
-@media(min-width:600px){
-  .slide{flex:0 0 70%}
-}
-@media(min-width:992px){
-  .slide{flex:0 0 50%}
-}
-
 .location p{
   padding: 1rem;
   margin: 0 auto;
@@ -362,31 +426,17 @@ input[type=radio]:checked ~ .dots a[href="#{id}"]{background:var(--dot-active)}
 
 /**INNER-PAGE STYLING*/
 .inner-page{
-  padding: 6.5rem 1.5rem 1rem 1.5rem;
-  text-align: left;
+  padding-top: 6.5rem;
+}
+.inner-page .hero-text{
+  width: fit-content;
+}
+.page-content p{  
+  text-align: justify;
 }
 
 /**INNER-PAGE STYLING*/
 
-
-/* Site plan styling */
-.siteplan section{
-  background-color: var(--mint-cream);
-  color: var(--secondary-color);
-  padding: 1rem;
-  margin: 0 auto;
-  min-height: 10rem;
-  text-align: justify;
-  line-height: 1.5;
-  max-width: 1200px;
-}
-.siteplan section:first-child{
-  background-color: var(--secondary-color);
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  margin-top: 0;
-}
 .bg-picture {
   position: absolute;
   z-index: -1;
@@ -402,89 +452,98 @@ input[type=radio]:checked ~ .dots a[href="#{id}"]{background:var(--dot-active)}
   height: 100%;
   object-fit: cover;
 }
-
-.siteplan section:nth-child(2){
-  text-align: center;
-}
-.siteplan section ul{
+ section ul{
   margin-left: 1.5rem;
 }
-.siteplan .vertical{
+table .vertical{
   display: block;
 }
-.siteplan .horizontal{
+table .horizontal{
   display: none;
 }
-.siteplan table{
-    width: 100%;
+table{
+  width: 100%;
 }
-.siteplan table,
-.siteplan th,
-.siteplan td {
+table,
+th,
+td{
   border: 1px solid black;
   border-collapse: collapse;
 }
-.siteplan th,
-.siteplan td {
-  padding: 5px;
+th,
+td {
+  padding: .5rem;
   text-align: left;
 }
-.siteplan .vertical{
+th{
+  background-color: whitesmoke;
+}
+ .vertical{
     display: block;
 }
-.siteplan .horizontal{
+ .horizontal{
     display: none;
 }
-.siteplan .heading {
+ .heading {
   font-family: var(--font-headings);
   font-weight: 500;
   font-size: 1.3rem;
 }
-.siteplan .paragraph {
+ .paragraph {
   font-family: var(--font-text);
 }
-.siteplan .primary{
+.primary{
   background: var(--primary-color);
   color: var(--white);
 }
-.siteplan .secondary{
+ .secondary{
   background: var(--secondary-color);
   color: var(--alice-blue);
 }
-.siteplan .accent{
+ .accent{
   background: var(--accent-color);
   color: white;
 }
-.siteplan .alice-blue{
+ .background-1{
   background: var(--alice-blue);
   color: var(--secondary-color);
 }
-.siteplan .mint-cream{
+ .background-2{
   background: var(--mint-cream);
   color: var(--secondary-color);
 }
-.siteplan .text-color{
-  background: white;
-  color: var(--secondary-color);
-}
 
-.siteplan hr.shadow-line {
+hr.shadow-line {
   border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(0,0,0,0.3), transparent);
-  margin: 2rem 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary-color) 30%,
+    var(--accent-color) 50%,
+    var(--primary-color) 70%,
+    transparent
+  );
+  border-radius: 2px;
+  margin: 3rem auto;
+  max-width: 800px;
 }
 
+/* Services Section */
 
-/* Site plan styling */
+
+/* Services Section */
 
 footer {
   background-color: var(--secondary-color);
   text-align: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 1rem;
   justify-content: center;
+  line-height: 1.5rem;
+}
+footer h4{
+  color: white;
 }
 footer p{color: white;}
 footer a{
@@ -495,30 +554,30 @@ footer a:hover{
   text-decoration: underline;
   color: var(--primary-color);
 }
-footer p:last-child{
-  font-size: .8rem;
-  background-color: var(--rich-black);
-}
-@media screen and (min-width:768px){
+
+@media screen and (min-width:600px){
   p{
     text-align: center;
     font-size: 1.1rem;
   }
-  main section{
+  section{
     text-align: left;
     margin: 0 auto;
-    min-height: 40vh;
+    min-height: 30vh;
     align-content: center;
+    padding: 2rem;
+  }
+  
+
+  /* Make date & notes span full width on desktop */
+  input[type="date"],
+  textarea,
+  button {
+    grid-column: span 2;
   }
   footer p{font-size: .9rem;}
-  .about p {
-    max-width: 1200px;
-  }
-  .siteplan section{
-    margin: 10px auto;
-    border-radius: 10px;
-  }
-  .siteplan section:nth-child(2){
+  
+   section:nth-child(2){
     text-align: left;
   }
   /* Side Menu */
@@ -526,23 +585,19 @@ footer p:last-child{
     left: -50%;
     width: 50%;
   }
-  .siteplan .vertical{
+   .vertical{
     display: none;
   }
-  .siteplan .horizontal{
+   .horizontal{
     display: block;
   }
   .card p{
     text-align: center;
   }
+  .slide{flex:0 0 70%}
+
 }
-@media screen and (min-width: 1024px) {
-  main section{
-    width: 100%;
-  }
-  .siteplan section:first-child{
-    max-width: inherit;
-  }
+@media screen and (min-width: 992px) {
   .service-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -569,6 +624,16 @@ footer p:last-child{
   }
   .hero-text p {
     font-size: 1.5rem;
+  }
+  .slide{flex:0 0 50%}
+  footer{
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr) ;
+    gap: 4rem;
+    padding: 2rem;
+    justify-content: space-around;
+    align-content: center;
+    text-align: justify;
   }
 }
 

@@ -28,7 +28,7 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"><img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250"></a>
+        <a href="index.html"><img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250"></a>
     </div>
     <nav class="menu">
         <ul class="menu-links">
@@ -36,6 +36,7 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#appointment" class="btn booking">Book an Appointment</a></li>
         </ul>
     </nav>
     <!-- Hamburger Icon -->
@@ -53,31 +54,73 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#appointment" class="btn booking">Book an Appointment</a></li>
         </ul>
     </nav>
   </header>
 
-  <main class="services">
-    <h1>Our Services</h1>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Performance Tuning</h3>
-        <p>Boost your car's power and responsiveness with expert tuning.</p>
+  <main class="inner-page">
+    <section class="hero-page" id="page">
+      <picture class="bg-picture">
+        <source media="(min-width: 769px)" srcset="images/garage-large.webp">
+        <source media="(min-width: 426px)" srcset="images/garage-medium.webp">
+        <img src="images/garage-small.jpg" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
+      </picture>
+      <div class="hero-text">
+        <h1>Services</h1>      
       </div>
-      <div class="card">
-        <h3>Routine Maintenance</h3>
-        <p>Keep your vehicle running smoothly with regular service checks.</p>
-      </div>
-      <div class="card">
-        <h3>Engine Diagnostics</h3>
-        <p>Advanced tools to detect and fix engine issues promptly.</p>
-      </div>
-    </div>
+    </section>
+    <section class="page-content services">
+      <article class="service-section">
+        <img src="images/performance-tuning.webp" alt="Performance Tuning">
+        <div>
+          <h2>Performance Tuning</h2>
+          <p>Boost your car’s output and responsiveness through precision tuning — including ECU remapping, intake upgrades, and dyno testing — for enthusiasts who crave performance.</p>          
+        </div>
+      </article>
+
+      <article class="service-section reverse">
+        <img src="images/routine-maintenance.webp" alt="Routine Maintenance">
+        <div>
+          <h2>Routine Maintenance</h2>
+          <p>From oil and filter changes to safety inspections, our preventive maintenance services ensure your vehicle remains road-ready and reliable, mile after mile.</p>          
+        </div>
+      </article>
+
+      <article class="service-section">
+        <img src="images/diagnostics.webp" alt="Diagnostics">
+        <div>
+          <h2>Advanced Diagnostics</h2>
+          <p>Our advanced diagnostic systems detect engine, transmission, or electronic faults quickly and accurately, saving you time and money on repairs.</p>
+          
+        </div>
+      </article>
+
+      <article class="service-section reverse">
+        <img src="images/brake-service.webp" alt="Brake & Suspension">
+        <div>
+          <h2>Brake & Suspension</h2>
+          <p>Stay safe with brake pad replacements, rotor resurfacing, suspension upgrades, and shock/strut inspections — all performed with precision and premium parts.</p>
+          
+        </div>
+      </article>
+
+      <article class="service-section">
+        <img src="images/wheel-alignment.webp" alt="Wheel Alignment">
+        <div>
+          <h2>Wheel Alignment</h2>
+          <p>Ensure optimal tire wear and driving stability with 3D digital wheel alignment calibrated to your vehicle's exact specs.</p>
+        </div>
+      </article>
+    <div style="text-align:center; margin-top:2rem;">
+    <a href="contact.html#appointment" class="btn">Request a Service</a>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 FOUNTEX Garage. All rights reserved.</p>
-    <p><a href="siteplan.html">Site Plan</a></p>
+    <p>&copy; <span id="currentyear"></span><span> FOUNTEX Garage. All rights reserved.</span> | <span><a href="siteplan.html">Site Plan</a></span></p>
+    <p>Baron Tshibasu - Kinshasa, DR Congo</p><br>
+    <p><i><span> Last modification: </span><span id="lastModified"></i></span> </p>
   </footer>
 </body>
 </html>
