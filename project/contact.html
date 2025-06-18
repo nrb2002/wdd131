@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - FOUNTEX Garage</title>
+  <link rel="icon" type="image/x-icon" href="images/icon-fountex-gr.ico">
   
   <meta 
       name="description" 
@@ -64,15 +65,15 @@
   <main class="inner-page">
     <section class="hero-page" id="page">
       <picture class="bg-picture">
-        <source media="(min-width: 769px)" srcset="images/garage-large.webp">
-        <source media="(min-width: 426px)" srcset="images/garage-medium.webp">
-        <img src="images/garage-small.jpg" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
+        <source media="(min-width: 900px)" srcset="images/fountex-gallery3-large.webp">
+        <source media="(min-width: 600px)" srcset="images/fountex-gallery3-medium.webp">
+        <img src="images/fountex-gallery1-medium.webp" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
       </picture>
       <div class="hero-text">
         <h1>Contact Us</h1>      
       </div>
     </section>
-    <section class="page-content">
+    <section class="page-content contact">
       <h2>Leave us a message.</h2>
       <form id="contactForm" action="confirmation.html" method="get">
         <small>All field marked with a "*" are required.</small>
@@ -103,9 +104,28 @@
     </section>
   </main>
 
+  <!-- ======  FOOTER  ====== -->
   <footer>
-    <p>&copy; 2025 FOUNTEX Garage. All rights reserved.</p>
-    <p><a href="siteplan.html">Site Plan</a></p>
+    <div>
+      <p>&copy; <span id="currentyear"></span> FOUNTEX Garage. All rights reserved.</p>
+      <p>Baron Tshibasu - Kinshasa, DR Congo</p><br>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="siteplan.html">Site Plan</a></li>
+      </ul>
+
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="https://www.freepik.com/search?format=search&last_filter=selection&last_value=1&query=Garage&selection=1" target="_blank" rel="noopener noreferrer">FREEPIK</a></li>
+        <li><a href="https://unsplash.com/s/photos/car-garage" target="_blank" rel="noopener noreferrer">Unsplash</a></li>
+        <li><a href="https://www.pexels.com/search/garage/" target="_blank" rel="noopener noreferrer">Pexels</a></li>
+      </ul>
+    </div>    
+    <p><i><span> Last modification: </span><span id="lastModified"></i></span> </p>
   </footer>
 </body>
 </html>

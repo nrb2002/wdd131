@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Home - FOUNTEX Garage</title>
+  <link rel="icon" type="image/x-icon" href="images/icon-fountex-gr.ico">
   
   <meta 
       name="description" 
@@ -16,12 +17,12 @@
   <meta name="author" content="Baron Tshibasu">
 
   <!-- CSS links -->
-    <link rel="stylesheet" href="styles/fountex-garage.css">
+  <link rel="stylesheet preload" href="styles/fountex-garage.css">
 
     <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Imperial+Script&family=Lavishly+Yours&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="preload">
   
   <!-- Javascript files -->
    <script src="scripts/fountex-garage.js" defer></script>
@@ -32,7 +33,7 @@
 <body>
   <header>
     <div class="logo">
-        <a href="index.html"><img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250"></a>
+      <a href="index.html"><img src="images/logo-fountex-gr.webp" alt="FOUNTEX Garage" width="250"></a>
     </div>
     <nav class="menu">
         <ul class="menu-links">
@@ -66,9 +67,9 @@
      <!-- ======  HERO  ====== -->
     <section class="hero" id="home">
       <picture class="bg-picture">
-        <source media="(min-width: 768px)" srcset="images/garage-large.webp">
-        <source media="(min-width: 425px)" srcset="images/garage-medium.webp">
-        <img src="images/garage-small.jpg" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
+        <source media="(min-width: 992px)" srcset="images/garage-large.webp">
+        <source media="(min-width: 600px)" srcset="images/garage-medium.webp">
+        <img src="images/garage-small.webp" alt="Hero Fountex Garage" loading="lazy" aria-hidden="true" width="500"/>
       </picture>
       <div class="hero-text">
         <h1>Performance. Precision. Passion.</h1>
@@ -80,10 +81,10 @@
      <!-- ======  ABOUT  ====== -->
     <section class="about" id="about">
       <h2>FOUNTEX Garage is built on performance passion and decades of technical expertise. </h2>
-      <p>Based in the beautiful city of Kinshasa (DRC), we specialize in Japanese automotive brands, blending advanced diagnostics with motorsport-ade precision.</p>
+      <p>Based in the beautiful city of Kinshasa (DRC), we specialize in Japanese automotive brands, blending advanced diagnostics with motorsport-grade precision.</p>
     </section>
 
-     <!-- ======  SERVICES SECTION  ====== -->
+     <!-- ======  SERVICES  ====== -->
     <section class="services" id="services">
       <h2>Our Services</h2>
       <div class="service-cards">
@@ -93,7 +94,7 @@
         </div>
         <div class="card">
           <h3>Routine Maintenance</h3>
-          <p>From oil changes to filter replacements, we’veGot you covered.</p>
+          <p>From oil changes to filter replacements, we’ve got you covered.</p>
         </div>
         <div class="card">
           <h3>Engine Diagnostics</h3>
@@ -103,41 +104,7 @@
     </section>
     
     <!-- ======  SLIDER  ====== -->
-    <section aria-label="FOUNTEX Gallery" class="gallery" id="gallery">
-      <!-- hidden radios give us a :checked hook -->
-      <input type="radio" name="slider" id="s1" checked>
-      <input type="radio" name="slider" id="s2">
-      <input type="radio" name="slider" id="s3">
-      <input type="radio" name="slider" id="s4">
-
-      <div class="slider">
-        <label class="slide" for="s1" id="slide1">
-          <source media="(min-width: 768px)" srcset="images/fountex-gallery1-large.webp">
-          <source media="(min-width: 425px)" srcset="images/fountex-gallery1-medium.webp">
-          <img src="images/fountex-gallery1.webp" alt="Dyno tuning at FOUNTEX Garage" loading="lazy" aria-hidden="true" width="500">
-        </label>
-
-        <label class="slide" for="s2" id="slide2">
-          <img src="images/gallery2.webp" alt="Performance exhaust installation">
-        </label>
-
-        <label class="slide" for="s3" id="slide3">
-          <img src="images/gallery3.webp" alt="Brake & suspension bay">
-        </label>
-
-        <label class="slide" for="s4" id="slide4">
-          <img src="images/gallery4.webp" alt="Customer lounge overlooking service bays">
-        </label>
-
-        <!-- navigation dots -->
-        <div class="dots" aria-hidden="true">
-          <a href="#slide1"></a>
-          <a href="#slide2"></a>
-          <a href="#slide3"></a>
-          <a href="#slide4"></a>
-        </div>
-      </div>
-    </section>
+    
     
     <!-- ======  APPOINTMENT BOOKING  ====== -->
     <section class="appointment" id="appointment">
@@ -146,36 +113,36 @@
         <fieldset>
           <legend>Customer Info</legend>
           <label for="name">Full Name *
-          <input type="text" id="name" name="name" required/>
+            <input type="text" id="name" name="name" required/>
           </label>
           <label for="phone">Phone Number
-          <input type="tel" id="phone" name="phone" placeholder="+243 000 000 000" required/>
+            <input type="tel" id="phone" name="phone" placeholder="+243 000 000 000" required/>
           </label>
           <label for="email">Email Address
-          <input type="email" id="email" name="email" required/>
+            <input type="email" id="email" name="email" required/>
           </label>
         </fieldset>
         <fieldset>
           <legend>Vehicle Info</legend>
           <label for="vehicle">Vehicle Make & Model
-        <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Corolla 2021" required/>
+            <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Corolla 2021" required/>
+          </label>
         </fieldset>
         <fieldset>
           <legend>Service Needed</legend>
           <label for="service">Service Type
-          <select id="service" name="service" required>
-            <option value="">-- Select a Service --</option>
-            <!-- Options populated via services.js javascript file-->
-          </select>
+            <select id="service" name="service" required>
+              <option value="">-- Select a Service --</option>
+              <!-- Options populated via services.js javascript file-->
+            </select>
           </label>
           <label for="date">Preferred Date
-          <input type="date" id="date" name="date" required/>
+            <input type="date" id="date" name="date" required/>
           </label>
           <label for="notes">Additional Notes
-          <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about the issue or request..."></textarea>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us more about the issue or request..."></textarea>
           </label>
         </fieldset>
-        </label>
         
         <button type="submit">Confirm my appointment</button>
       </form>
